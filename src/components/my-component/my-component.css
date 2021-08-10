@@ -8,3 +8,8 @@
 .not-selected{
   opacity: 1;
 }
+
+
+.chart {
+  width: 100%;
+}
