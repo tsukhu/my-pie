@@ -7,7 +7,7 @@ import { quantize } from 'd3-interpolate';
 import { interpolateCool } from 'd3-scale-chromatic';
 
 @Component({
-  tag: 'my-component',
+  tag: 'my-pie',
   styleUrl: 'my-component.css',
   shadow: true
 })
@@ -24,9 +24,7 @@ export class MyComponent {
   }
 
   componentDidLoad(){
-    let svg = select(this.element.shadowRoot.querySelectorAll(".chart")[0])
-      .attr("width", this.width)
-      .attr("height", this.height);
+    let svg = select(this.element.shadowRoot.querySelectorAll(".chart")[0]);
     this.buildChart(svg);
   }
 
@@ -78,7 +76,7 @@ export class MyComponent {
   render() {
     return  (
       <Host>
-        <svg class="chart" viewBox="0 0 400 100"/>
+        <svg class="chart" viewBox="0 0 400 400"/>
       </Host>
     )
   }
