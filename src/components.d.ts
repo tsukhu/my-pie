@@ -6,38 +6,38 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface MyPie {
+    interface MyComponent {
         "data": string;
         "height": number;
         "width": number;
     }
 }
 declare global {
-    interface HTMLMyPieElement extends Components.MyPie, HTMLStencilElement {
+    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
-    var HTMLMyPieElement: {
-        prototype: HTMLMyPieElement;
-        new (): HTMLMyPieElement;
+    var HTMLMyComponentElement: {
+        prototype: HTMLMyComponentElement;
+        new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
-        "my-pie": HTMLMyPieElement;
+        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyPie {
+    interface MyComponent {
         "data"?: string;
         "height"?: number;
         "width"?: number;
     }
     interface IntrinsicElements {
-        "my-pie": MyPie;
+        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-pie": LocalJSX.MyPie & JSXBase.HTMLAttributes<HTMLMyPieElement>;
+            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }
